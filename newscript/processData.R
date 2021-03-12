@@ -41,6 +41,12 @@ croppedRefData$PolyID <- 1:nrow(croppedRefData)
 merged <- merge(ext,croppedRefData,by.x="ID",by.y="PolyID")
 
 
+# NDVI change
+ndvi_before = raster(f[3])
+ndvi_after = raster(f[4])
+
+
+
 # subtractNDVIs = function(index1, index2):
 #   threshold = -0.05
 #   third = read_stars((f[3]))
