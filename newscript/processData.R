@@ -36,6 +36,12 @@ sampleDat_proj <- st_transform(
   crs="+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs"
 )
 
+
+# load new reference data
+load("wholeRefData.RData")
+plot(refData$AM2002 == 1 & refData$AM2006 == 0)
+
+
 # extract only those raster pixels that are 
 # within the polygons of the reference data
 ndvi_before = raster(f[3])
